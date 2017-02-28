@@ -46,7 +46,7 @@ public class MyUtil {
                 version1 = i >= version1s.length ? 0 : Long.parseLong(version1s[i]);
                 version2 = i >= version2s.length ? 0 : Long.parseLong(version2s[i]);
             } catch (Exception e) {
-                throw e;
+                throw new Exception("版本号过长");
             } finally {
                 if (version1 > version2) {
                     return 1;
